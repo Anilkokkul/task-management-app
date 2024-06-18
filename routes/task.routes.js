@@ -1,10 +1,11 @@
 const express = require("express");
 const { getAllTasks, createTask } = require("../controllers/tasks.controller");
+const { isAuth } = require("../utils/authorization");
 
 const router = express.Router();
 
 //get all the tasks list route
-router.get("/tasks", getAllTasks);
+router.get("/tasks", isAuth, getAllTasks);
 
 //create task route
 router.post("/task", createTask);
