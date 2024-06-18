@@ -8,6 +8,7 @@ const taskSchema = new mongoose.Schema(
     },
     description: {
       type: String,
+      required: true,
     },
     dueDate: {
       type: Date,
@@ -24,3 +25,5 @@ const taskSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+module.exports = mongoose.model("Tasks", taskSchema);
