@@ -2,6 +2,8 @@ const Users = require("../model/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+
+//user Registration controller
 exports.registerUser = async (req, res) => {
   try {
     const payload = req.body;
@@ -36,11 +38,13 @@ exports.registerUser = async (req, res) => {
   }
 };
 
+
+//user login controller
 exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const userExist = await Users.findOne({ email: email });
+    const userExist = await Users.findOne({ email: email }); //check for user already exist
 
     if (userExist) {
       if (bcrypt.compareSync(password, userExist.hashedPassword)) {
@@ -71,12 +75,13 @@ exports.loginUser = async (req, res) => {
   }
 };
 
+//user logout controller
 exports.logoutUser = (req, res) => {
   try {
-    res.clearCookie("accessToken")
+    res.clearCookie("accessToken");
     res.status(200).send({
-        message: "User Logged-out Successfully"
-    })
+      message: "User Logged-out Successfully",
+    });
   } catch (error) {
     res.status(500).send({
       message: "Internal Server error",
