@@ -8,7 +8,7 @@ exports.registerUser = async (req, res) => {
   try {
     const payload = req.body;
 
-    const userExist = await Users.findOne({ email: payload.email });
+    const userExist = await Users.findOne({ email: payload.email }); //check for user already exist
     if (userExist) {
       return res
         .status(400)
