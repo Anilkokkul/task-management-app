@@ -29,4 +29,8 @@ This project is a RESTful API for managing tasks, built with Node.js, Express.js
   ```bash
   npm install
   
-3.Set environment variables:
+3. Set environment variables:
+   ```bash
+  PORT=5000
+  MONGO_URL=YOUR_MONGO_URL
+  SECRET_KEY=YOUR_SECRET_KEY
