@@ -2,12 +2,6 @@
 
 This project is a RESTful API for managing tasks, built with Node.js, Express.js, and MongoDB. It supports CRUD operations for tasks and includes JWT-based authentication.
 
-## Table of Contents
-
-- [Setup](#setup)
-- [API Documentation](#API Documentation)
-
-
 ## Setup
 
 ### Prerequisites
