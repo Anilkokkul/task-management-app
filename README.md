@@ -5,11 +5,8 @@ This project is a RESTful API for managing tasks, built with Node.js, Express.js
 ## Table of Contents
 
 - [Setup](#setup)
-- [API Endpoints](#api-endpoints)
-  - [Authentication](#authentication)
-  - [Tasks](#tasks)
-- [Testing](#testing)
-- [License](#license)
+- [API Documentation](#API Documentation)
+
 
 ## Setup
 
@@ -22,15 +19,29 @@ This project is a RESTful API for managing tasks, built with Node.js, Express.js
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/task-manager.git
-   cd task-manager
+   git clone https://github.com/Anilkokkul/task-management-app.git
+   cd task-management-app
 
 2.Install Dependancies
   ```bash
   npm install
-  
-3. Set environment variables:
-   ```bash
+  ```
+3.Set environment variables:
+
+Create a .env file at the root of the project and add the following:
+```bash
   PORT=5000
   MONGO_URL=YOUR_MONGO_URL
   SECRET_KEY=YOUR_SECRET_KEY
+  ```
+4.Run server
+```bash
+npm run dev
+```
+
+
+## API Documentation
+
+ - [Task Management system APIs with example](https://documenter.getpostman.com/view/28958585/2sA3XTef8X)
+
+
