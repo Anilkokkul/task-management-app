@@ -33,7 +33,6 @@ Create a .env file at the root of the project and add the following:
 npm run dev
 ```
 
-
 ## API Documentation
 
  - [Task Management system APIs with example](https://documenter.getpostman.com/view/28958585/2sA3XTef8X)
