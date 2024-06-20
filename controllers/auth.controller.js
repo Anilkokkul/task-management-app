@@ -49,7 +49,7 @@ exports.loginUser = async (req, res) => {
     if (userExist) {
       if (bcrypt.compareSync(password, userExist.hashedPassword)) {
         const token = jwt.sign({ id: userExist._id }, process.env.SECRET_KEY);
-        res.cookie("accessToken", token, {
+        res.cookie("accessToken", token, {  //sending token as cookie
           httpOnly: true,
           secure: true,
           sameSite: "none",
